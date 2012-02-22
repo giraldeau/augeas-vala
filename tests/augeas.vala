@@ -1,6 +1,6 @@
-#!/usr/bin/vala --pkg augeas --vapidir=../vapis
+#!/usr/bin/vala --pkg augeas --vapidir=../src
 /*
- * valac --debug --verbose --save-temps --pkg augeas --vapidir . augeas.vala
+ * valac --debug --verbose --save-temps --pkg augeas --vapidir ../src augeas.vala
  */
 
 using Augeas;
