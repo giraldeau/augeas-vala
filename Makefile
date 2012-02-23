@@ -2,4 +2,4 @@ all:
 	echo Nothing
 
 test:
-	cd test && ./augeas.vala
+	cd tests && ./augeas.vala
