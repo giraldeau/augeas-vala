@@ -6,8 +6,8 @@ Summary:    Vala bindings for augeas
 Group:      Development/Languages
 License:    LGPLv2+
 URL:        http://www.gitorious.org/valastuff/augeas-vala/
+# Source from https://gitorious.org/valastuff/augeas-vala/archive-tarball/0.10
 Source0:    valastuff-augeas-vala-0.10.tar.gz
-Source1:    https://gitorious.org/valastuff/augeas-vala/archive-tarball/0.10
 BuildArch:  noarch
 
 BuildRequires:  vala
@@ -23,14 +23,14 @@ Vala bindings for augeas.
 %build
 make %{?_smp_mflags}
 
-%check
-make %{?_smp_mflags} test
-
 %install
 rm -rf %{buildroot}
 install -d -m0755 %{buildroot}/%{_datadir}/vala/vapi/
 install -m664 src/augeas.deps %{buildroot}/%{_datadir}/vala/vapi/
 install -m664 src/augeas.vapi %{buildroot}/%{_datadir}/vala/vapi/
+
+%check
+make %{?_smp_mflags} test
 
 %files
 %defattr(-,root,root,-)
