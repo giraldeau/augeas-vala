@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FOLDER=$(basename "$PWD")
-ARCH=$FOLDER.tar.xz
+ARCH=valastuff-augeas-vala-0.10.tar.gz
 
 pushd .
 cd ..
