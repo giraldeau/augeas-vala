@@ -6,7 +6,8 @@ Summary:    Vala bindings for augeas
 Group:      Development/Languages
 License:    LGPLv2+
 URL:        http://www.gitorious.org/valastuff/augeas-vala/
-Source:     augeas-vala.tar.xz
+Source0:    valastuff-augeas-vala-0.10.tar.gz
+Source1:    https://gitorious.org/valastuff/augeas-vala/archive-tarball/0.10
 BuildArch:  noarch
 
 BuildRequires:  vala
@@ -40,5 +41,4 @@ install -m664 src/augeas.vapi %{buildroot}/%{_datadir}/vala/vapi/
 %changelog
 * Wed Feb 22 2012 - Fabian Deutsch <fabiand@fedoraproject.org> - 0.10.0-1
 - Initial version
-
 
