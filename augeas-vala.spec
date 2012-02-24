@@ -18,7 +18,7 @@ Requires:       augeas-devel >= %{version}
 Vala bindings for augeas.
 
 %prep
-%setup -q -n augeas-vala
+%setup -q -n valastuff-augeas-vala
 
 %build
 make %{?_smp_mflags}
