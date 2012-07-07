@@ -7,7 +7,7 @@ Group:      Development/Languages
 License:    LGPLv2+
 URL:        http://www.gitorious.org/valastuff/augeas-vala/
 # Source from https://gitorious.org/valastuff/augeas-vala/archive-tarball/0.10
-Source0:    valastuff-augeas-vala-0.10.tar.gz
+Source0:    augeas-vala-0.10.tar.gz
 BuildArch:  noarch
 
 BuildRequires:  vala
@@ -18,16 +18,14 @@ Requires:       augeas-devel >= %{version}
 Vala bindings for augeas.
 
 %prep
-%setup -q -n valastuff-augeas-vala
+%setup -q -n augeas-vala
 
 %build
 make %{?_smp_mflags}
 
 %install
 rm -rf %{buildroot}
-install -d -m0755 %{buildroot}/%{_datadir}/vala/vapi/
-install -m664 src/augeas.deps %{buildroot}/%{_datadir}/vala/vapi/
-install -m664 src/augeas.vapi %{buildroot}/%{_datadir}/vala/vapi/
+make install DESTDIR=%{buildroot}
 
 %check
 make %{?_smp_mflags} test
