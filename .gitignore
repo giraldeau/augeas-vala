@@ -1,1 +1,17 @@
 *~
+.valencia
+Makefile.in
+aclocal.m4
+autom4te.cache/
+config.log
+config.status
+config/
+configure
+libtool
+tests/.deps/
+tests/Makefile
+tests/Makefile.in
+tests/*.c
+tests/*.o
+tests/*.stamp
+tests/test-augeas

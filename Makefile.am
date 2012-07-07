@@ -3,7 +3,7 @@ ACLOCAL_AMFLAGS = -I config
 vapi_dir := /vala/vapi
 vapi_dest := $(DESTDIR)$(datadir)$(vapi_dir)
 
-#SUBDIRS = src tests
+SUBDIRS = tests
 EXTRA_DIST = src
 
 install-data-local:
