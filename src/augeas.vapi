@@ -32,7 +32,9 @@ namespace Augeas {
     NO_STDINC,
     SAVE_NOOP,
     NO_LOAD,
-    NO_MODL_AUTOLOAD
+    NO_MODL_AUTOLOAD,
+    ENABLE_SPAN,
+    NO_ERR_CLOSE
   }
 
   [CCode (cprefix= "AUG_")]
@@ -63,6 +65,11 @@ namespace Augeas {
     public int set (string path, string val);
     public int setm (string base, string sub, string val);
     public int insert (string path, string label, bool before);
+
+    public int span(string path, out string? filename,
+                     out uint label_start, out uint label_end,
+                     out uint value_start, out uint value_end,
+                     out uint span_start, out uint span_end);
 
     public int rm (string path);
     public int mv (string src, string dst);
